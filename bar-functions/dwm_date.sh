@@ -7,10 +7,14 @@
 # Date is formatted like like this: "[Mon 01-01-00 00:00:00]"
 dwm_date () {
     printf "%s" "$SEP1"
+    days=('Sunday' 'Mondy' 'Tuesday' 'Wednesday' 'Thursday' 'Friday' 'Saturday')
+
     if [ "$IDENTIFIER" = "unicode" ]; then
-        printf "📆 %s" "$(date "+%a %d-%m-%y %T")"
+        # printf "%s - " "${days[$(date "+%u")]}"
+        printf "%s - " "$(date "+%A")"
+        printf "%s" "$(date "+%m/%d/%y %X")"
     else
-        printf "DAT %s" "$(date "+%a %d-%m-%y %T")"
+        printf "DAT %s" "$(date "+%m'/'%d'/'%y' '%X")"
     fi
     printf "%s\n" "$SEP2"
 }

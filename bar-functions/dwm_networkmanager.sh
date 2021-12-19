@@ -23,3 +23,4 @@ dwm_networkmanager () {
 }
 
 dwm_networkmanager
+
