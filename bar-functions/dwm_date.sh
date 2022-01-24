@@ -12,7 +12,7 @@ dwm_date () {
     if [ "$IDENTIFIER" = "unicode" ]; then
         # printf "%s - " "${days[$(date "+%u")]}"
         printf "%s - " "$(date "+%A")"
-        printf "%s" "$(date "+%m/%d/%y %X")"
+        printf "%s" "$(date "+%m/%d/%y %r")"
     else
         printf "DAT %s" "$(date "+%m'/'%d'/'%y' '%X")"
     fi
